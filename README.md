@@ -5,12 +5,12 @@ This is a simple .NET wrapper around Drogon's great library [WiringPi](http://wi
 
 # How to
 
-1. Checkout WiringPi library:
+* Checkout WiringPi library:
 
 	* RaspberryPi: `git clone git://git.drogon.net/wiringPi`
 	* Odroid: `git clone https://github.com/hardkernel/wiringPi`
 
-2. Build it
+* Build it
 
 ```
 cd wiringPi
@@ -18,8 +18,8 @@ git pull origin
 ./build
 ```
 
-3. Check if Shared Object Library has been created:
+* Check if Shared Object Library has been created:
 
 `ls /usr/local/lib/libwiringPi.so`
 
-4. Now you can use WiringPi in your .NET/Mono projects, just add reference to WiringPi.NET.dll and you should be good to go.
+* Now you can use WiringPi in your .NET/Mono projects, just add reference to WiringPi.NET.dll and you should be good to go.
