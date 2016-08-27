@@ -7,8 +7,8 @@ This is a simple .NET wrapper around Drogon's great library [WiringPi](http://wi
 
 1. Checkout WiringPi library:
 
-..* RaspberryPi: `git clone git://git.drogon.net/wiringPi`
-..* Odroid: `git clone https://github.com/hardkernel/wiringPi`
+⋅⋅* RaspberryPi: `git clone git://git.drogon.net/wiringPi`
+⋅⋅* Odroid: `git clone https://github.com/hardkernel/wiringPi`
 
 2. Build it
 
