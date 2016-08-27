@@ -2,14 +2,7 @@
 using WiringPiNet.Exceptions;
 using WiringPiNet;
 using System.Collections.Generic;
-
-#if !DEBUG
 using WiringPiNet.Wrapper;
-#endif
-
-#if DEBUG
-using WiringPiNet.Fake;
-#endif
 
 namespace WiringPiNet
 {
