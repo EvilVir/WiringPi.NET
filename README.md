@@ -23,3 +23,7 @@ git pull origin
 `ls /usr/local/lib/libwiringPi.so`
 
 * Now you can use WiringPi in your .NET/Mono projects, just add reference to WiringPi.NET.dll and you should be good to go.
+
+# Wrapper, OO and Fake
+
+You can use plain wrapper located in `WiringPiNet.Wrapper` namespace or go for object-oriented classes from base namespace. Also if you wish to debug code outside of RPi's board then look on `WiringPiNet.Fake`namespace where you'll find fake wrapper that you can use instead of real one in debug environment (as running real wrapper on Windows will fail due to absence of libwiringPi.so and GPIO infrastructure). 
