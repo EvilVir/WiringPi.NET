@@ -31,3 +31,7 @@ You can use plain wrapper located in `WiringPiNet.Wrapper` namespace or go for o
 # PinWatcher
 
 Use PinWatcher class to observe certain pins with given interval. PinWatcher is pooling pins and issues event when anything has changed (value or mode).
+
+# GPIOTool
+
+Check [GPIOTool](https://github.com/EvilVir/GPIOTool) for usage example and also useful prototyping helper. 
