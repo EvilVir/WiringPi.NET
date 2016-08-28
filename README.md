@@ -27,3 +27,7 @@ git pull origin
 # Wrapper, OO and Fake
 
 You can use plain wrapper located in `WiringPiNet.Wrapper` namespace or go for object-oriented classes from base namespace. Also if you wish to debug code outside of RPi's board then look on `WiringPiNet.Fake`namespace where you'll find fake wrapper that you can use instead of real one in debug environment (as running real wrapper on Windows will fail due to absence of libwiringPi.so and GPIO infrastructure). 
+
+# PinWatcher
+
+Use PinWatcher class to observe certain pins with given interval. PinWatcher is pooling pins and issues event when anything has changed (value or mode).
