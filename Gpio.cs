@@ -1,12 +1,11 @@
 ﻿using System;
-using WiringPiNet.Exceptions;
-using WiringPiNet;
 using System.Collections.Generic;
+using WiringPiNet.Exceptions;
 using WiringPiNet.Wrapper;
 
 namespace WiringPiNet
 {
-	public class Gpio : IDisposable
+    public class Gpio : IDisposable
 	{
 		public enum NumberingMode
 		{
@@ -51,6 +50,19 @@ namespace WiringPiNet
 		{
 			return new GpioPin(this, pinNumber);
 		}
+
+		public IEnumerable<GpioPin> GetPins(IEnumerable<int> pinNumbers)
+		{
+			foreach (int pinNumber in pinNumbers)
+			{
+				yield return GetPin(pinNumber);
+			}
+		}
+
+        public IEnumerable<GpioPin> GetAllPins()
+        {
+            yield return new GpioPin(this, 1);
+        }
 
 		public void SetMode(int pin, PinMode mode)
 		{

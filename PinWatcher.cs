@@ -1,24 +1,11 @@
 ﻿using System;
-using System.Timers;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
+using System.Timers;
 
 namespace WiringPiNet
 {
-	public class PinWatcher : IDisposable
-	{
-		public class PinsStateChangedEventArgs : EventArgs
-		{
-			public GpioPin[] Pins { get; protected set; }
-
-			public PinsStateChangedEventArgs(IEnumerable<GpioPin> changedPins)
-			{
-				this.Pins = changedPins.ToArray();
-			}
-		}
-
-		public delegate void PinsStateChangedEventHandler(object sender, PinsStateChangedEventArgs e);
+    public class PinWatcher : IDisposable, IPinWatcher
+    {
 		public event PinsStateChangedEventHandler PinsStateChanged;
 			
 		public double Interval { get { return timer.Interval; } set { timer.Interval = value; } }

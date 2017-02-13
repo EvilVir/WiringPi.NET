@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fake\FakePinWatcher.cs" />
+    <Compile Include="IPinWatcher.cs" />
+    <Compile Include="PinsStateChangedEventArgs.cs" />
     <Compile Include="Wrapper\WiringPi.cs" />
     <Compile Include="Wrapper\I2C.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,7 +54,6 @@
     <Compile Include="Gpio.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="PinWatcher.cs" />
-    <Compile Include="Fake\WiringPi.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="GpioPin.cs" />
     <Compile Include="Tools\SerializationTool.cs" />
@@ -64,9 +66,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Fake\" />
-    <Folder Include="Tools\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
