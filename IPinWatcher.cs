@@ -12,6 +12,7 @@ namespace WiringPiNet
         bool Contains(params GpioPin[] pins);
         void Dispose();
         GpioPin Get(int index);
+        List<GpioPin> Get(List<int> index);
         List<GpioPin> GetAll();
         void Probe();
         void Remove(params GpioPin[] pins);

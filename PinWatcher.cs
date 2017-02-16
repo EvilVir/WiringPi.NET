@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Timers;
 
 namespace WiringPiNet
 {
-    public class PinWatcher : IDisposable, IPinWatcher
-    {
+	public class PinWatcher : IDisposable, IPinWatcher
+	{
 		public event PinsStateChangedEventHandler PinsStateChanged;
 			
 		public double Interval { get { return timer.Interval; } set { timer.Interval = value; } }
@@ -34,6 +35,14 @@ namespace WiringPiNet
 			}
 
 			return null;
+		}
+
+		public List<GpioPin> Get(List<int> index)
+		{
+			lock (locker)
+			{
+				return this.pins.Where(x => index.Contains(x.Number)).ToList();
+			}
 		}
 
 		public List<GpioPin> GetAll()

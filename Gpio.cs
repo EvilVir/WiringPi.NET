@@ -5,7 +5,7 @@ using WiringPiNet.Wrapper;
 
 namespace WiringPiNet
 {
-    public class Gpio : IDisposable
+	public class Gpio : IDisposable
 	{
 		public enum NumberingMode
 		{
@@ -59,10 +59,13 @@ namespace WiringPiNet
 			}
 		}
 
-        public IEnumerable<GpioPin> GetAllPins()
-        {
-            yield return new GpioPin(this, 1);
-        }
+		public IEnumerable<GpioPin> GetAllPins()
+		{
+			for (int i = 0; i <= 31; i++)
+			{
+				yield return new GpioPin(this, i);
+			}
+		}
 
 		public void SetMode(int pin, PinMode mode)
 		{

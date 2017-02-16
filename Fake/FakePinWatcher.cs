@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WiringPiNet.Fake
 {
@@ -24,6 +25,11 @@ namespace WiringPiNet.Fake
         public GpioPin Get(int index)
         {
             return null;
+        }
+
+        public List<GpioPin> Get(List<int> index)
+        {
+            return new List<GpioPin>();
         }
 
         public List<GpioPin> GetAll()
